@@ -74,7 +74,4 @@
 <br><br>
     <img src="./jellyfish_half.png" align="center">
 test upload3
-
-
-
 </body></html>
