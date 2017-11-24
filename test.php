@@ -63,7 +63,6 @@
         }
     </script>
 </head>
-
 <body>
   <br><br><br><br>
     <textarea id="result_text" cols="50" rows="5">    </textarea>
