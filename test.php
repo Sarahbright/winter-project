@@ -73,7 +73,7 @@
     <input type="button" onclick="vr_function();" value="音認開始">
 <br><br>
     <img src="./jellyfish_half.png" align="center">
-test upload
+test upload2
 
 
 
