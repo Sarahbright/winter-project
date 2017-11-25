@@ -33,15 +33,8 @@ function vr_function() {
         var results = event.results;
         var last = event.results.length - 1;
         var answer = event.results[last][0].transcript;
-        colors.forEach(function(v, i, a){
-          console.log(v, i);
-          if (v == answer) {
-            document.getElementById('result_text').innerHTML = "一致しました";
-            vr_function();
-          } else {
-            document.getElementById('result_text').innerHTML = "一致しません";
-          }
-        });
+        if (colors.includes(answer)) document.getElementById('result_text').innerHTML = "一致しました";
+        else document.getElementById('result_text').innerHTML = "一致しません";
         vr_function()
         // for (var i = event.resultIndex; i < results.length; i++) {
         //     if (results[i].isFinal)
