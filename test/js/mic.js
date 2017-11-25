@@ -38,6 +38,7 @@ function vr_function() {
             document.getElementById('result_text').innerHTML = "一致しました";
           }
         });
+        vr_function();
         // for (var i = event.resultIndex; i < results.length; i++) {
         //     if (results[i].isFinal)
         //     {
