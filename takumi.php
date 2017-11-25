@@ -15,6 +15,22 @@
 		#iamge {
 			width: 100%;
 		}
+		#image {
+		display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: solid;
+    border: solid 1px;
+    margin: 10px auto;
+		}
+		#story {
+			width: 100%;
+			border: 1px solid black;
+	    width: 100%;
+	    border: 1px solid black;
+	    height: 100px;
+		}
 	</style>
 </head>
 <body>
