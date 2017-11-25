@@ -32,24 +32,30 @@ function vr_function() {
         var results = event.results;
         var last = event.results.length - 1;
         var answer = event.results[last][0].transcript;
-        for (var i = event.resultIndex; i < results.length; i++) {
-            if (results[i].isFinal)
-            {
-                document.getElementById('result_text').innerHTML = results[i][0].transcript;
-                colors.forEach(function(v, i, a){
-                  console.log(v, i);
-                  if (v == results[i][0].transcript) {
-                    document.getElementById('result_text').innerHTML = "一致しました";
-                  }
-                });
-                vr_function();
-            }
-            else
-            {
-                document.getElementById('result_text').innerHTML = results[i][0].transcript;
-                flag_speech = 1;
-            }
-        }
+        colors.forEach(function(v, i, a){
+          console.log(v, i);
+          if (v == answer) {
+            document.getElementById('result_text').innerHTML = "一致しました";
+          }
+        });
+        // for (var i = event.resultIndex; i < results.length; i++) {
+        //     if (results[i].isFinal)
+        //     {
+        //         document.getElementById('result_text').innerHTML = results[i][0].transcript;
+        //         colors.forEach(function(v, i, a){
+        //           console.log(v, i);
+        //           if (v == results[i][0].transcript) {
+        //             document.getElementById('result_text').innerHTML = "一致しました";
+        //           }
+        //         });
+        //         vr_function();
+        //     }
+        //     else
+        //     {
+        //         document.getElementById('result_text').innerHTML = results[i][0].transcript;
+        //         flag_speech = 1;
+        //     }
+        // }
     }
     flag_speech = 0;
     document.getElementById('status').innerHTML = "start";
