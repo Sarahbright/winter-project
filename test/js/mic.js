@@ -37,6 +37,8 @@ function vr_function() {
           console.log(v, i);
           if (v == answer) {
             document.getElementById('result_text').innerHTML = "一致しました";
+          } else {
+            document.getElementById('result_text').innerHTML = "一致しません";
           }
         });
         vr_function()
