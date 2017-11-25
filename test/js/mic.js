@@ -37,7 +37,7 @@ function vr_function() {
           console.log(v, i);
           if (v == answer) {
             document.getElementById('result_text').innerHTML = "一致しました";
-            break;
+            vr_function();
           } else {
             document.getElementById('result_text').innerHTML = "一致しません";
           }
