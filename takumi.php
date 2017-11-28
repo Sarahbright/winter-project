@@ -4,12 +4,12 @@
 	<title>冬期岡本班</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
-	<link rel="stylesheet" href="animate.css" type="text/css" />
+	<link rel="stylesheet" href="css/animate.css" type="text/css" />
 	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-	<script type="text/javascript" src="jquery.textillate.js"></script>
-	<script type="text/javascript" src="jquery.lettering.js"></script>
-	<script type="text/javascript" src="jquery.fittext.js"></script>
-	<script type="text/javascript" src="takumi.js"></script>
+	<script type="text/javascript" src="js/jquery.textillate.js"></script>
+	<script type="text/javascript" src="js/jquery.lettering.js"></script>
+	<script type="text/javascript" src="js/jquery.fittext.js"></script>
+	<script type="text/javascript" src="js/takumi.js"></script>
 	<style type="text/css">
 		#fukidashi {
 			display: flex;
