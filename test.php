@@ -22,7 +22,7 @@
         function vr_function() {
             window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
             var recognition = new webkitSpeechRecognition();
-            recognition.lang = 'en';
+            recognition.lang = 'ja';
             recognition.interimResults = true;
             recognition.continuous = true;
 
