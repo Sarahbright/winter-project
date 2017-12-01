@@ -11,11 +11,11 @@ $(window).load(function(){
 		loop: false, //trueでループする
 		in: {
 			effect: "fadeIn",
-			delay: 80　//アニメーションスピードが変わる
+			delay: 80 //アニメーションスピードが変わる
 		},
 		out: {
 			effect: "rollOut",
-			delay: 20　//アニメーションスピードが変わる
+			delay: 20 //アニメーションスピードが変わる
 		},
 		callback: show_fukidashi //アニメーションが終わった後のコールバックの設定
 	};
