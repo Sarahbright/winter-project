@@ -1,9 +1,11 @@
 $(window).load(function(){
 
+	//吹き出し、解答など、あとでフェードインさせるものを消しておく。
 	$("#incorrect").hide();
 	$("#correct").hide();
 	$("#fukidashi").hide();
 
+	//文字アニメーションの設定
 	let $tltDemo = $('#story');
 	let options = {
 		loop: false, //trueでループする
@@ -15,14 +17,16 @@ $(window).load(function(){
 			effect: "rollOut",
 			delay: 20　//アニメーションスピードが変わる
 		},
-		callback: show_fukidashi
+		callback: show_fukidashi //アニメーションが終わった後のコールバックの設定
 	};
 	$tltDemo.textillate(options);
 
 });
 
+//音声認識関数の本体
 var flag_speech = 0;//flag
 function vr_function() {
+	//音声認識開始のための準備
 	window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 	var recognition = new webkitSpeechRecognition();
 	var speechRecognitionList = new webkitSpeechGrammarList();
@@ -35,6 +39,7 @@ function vr_function() {
 	speechRecognitionList.addFromString(grammar, 1);
 	recognition.grammars = speechRecognitionList;
 
+	//ステータスをコメント欄に表示
 	recognition.onsoundstart = function() {
 		document.getElementById('story').innerHTML = "認識中";
 	};
@@ -52,6 +57,7 @@ function vr_function() {
 		vr_function();
 	};
 
+	//回答を得られた時の関数
 	recognition.onresult = function() {
 		var results = event.results;
 		var last = event.results.length - 1;
@@ -59,11 +65,15 @@ function vr_function() {
 		after_answer(answer);//回答に応じての処理
 		vr_function();
 	}
+
+	//音声認識開始するところ
 	flag_speech = 0;
 	document.getElementById('story').innerHTML = "音声を入力してください";
 	recognition.start();
 }
 
+
+//回答を得られた時の処理の分岐
 function after_answer(answer) {
 	if (answer == "chair") {
 		$("#correct").fadeIn(1000, setTimeout(fadeout, 1000) );
@@ -85,6 +95,7 @@ function fadeout() {
 	$('#correct').fadeOut();
 }
 
+//#imageにシャッター的な動作を付与する
 function shutter(){
 	let container = $('#image'),
 	li = container.find('img');
@@ -101,8 +112,8 @@ function shutter(){
 }
 
 function show_fukidashi() {
-	shutter();
-	$("#fukidashi").fadeIn(0, setTimeout(vr_function, 1000));
+	shutter();//シャッターのテスト 適当な場所に置いて使って大丈夫です。
+	$("#fukidashi").fadeIn(0, setTimeout(vr_function, 1000));//吹き出しフェードインのテスト
 }
 
 
